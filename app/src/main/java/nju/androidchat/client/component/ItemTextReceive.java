@@ -26,7 +26,7 @@ public class ItemTextReceive extends LinearLayout {
     private OnRecallMessageRequested onRecallMessageRequested;
 
 
-    public ItemTextReceive(Context context, String text, UUID messageId) {
+    public ItemTextReceive(Context context, CharSequence text, UUID messageId) {
         super(context);
         this.context = context;
         inflate(context, R.layout.item_text_receive, this);
@@ -43,7 +43,7 @@ public class ItemTextReceive extends LinearLayout {
         return textView.getText().toString();
     }
 
-    public void setText(String text) {
+    public void setText(CharSequence text) {
         textView.setText(text);
     }
 }

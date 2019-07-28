@@ -67,9 +67,9 @@ public class Hw1TalkActivity extends AppCompatActivity implements nju.androidcha
                 for (ClientMessage message : messages) {
                     String text = String.format("%s", message.getMessage());
                     if (isImage(text)) {
-                        String[] str = text.split("!\\[.*\\]");
+                        String[] str = text.split("!\\[\\]");
                         String url = str[str.length - 1];
-                        url = text.substring(2, url.length() - 2);
+                        url = url.substring(2, url.length() - 2);
                         String img_html = "<img src ='" + url + "'>";
                         CharSequence CharS;
                         try {

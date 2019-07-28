@@ -1,0 +1,10 @@
+分析：从MVP结构特点容易知道，对于特定格式用于显示图片的字符串，只要在传递的过程中保持原格式，在显示时转化为图片的形式进行展示即可。
+      因此，只需对TalkActivity中的showMessage方法进行修改，使其能识别该格式字符串并将其处理以图片形式显示即可
+关键点：由于String格式的字符串不能满足我们显示图片的需求，因此，我们将Text的格式修改为CharSequence
+修改：Component包中ItemTextReceive与ItemTextSend中text的格式均改为CharSequence，其余代码无修改
+      TalkActivity中修改showMessage方法，增加isImage方法与getOnlineImg方法
+      其余为配置修改
+作用：showMessage方法用于将图片与普通信息进行展示
+      isImage方法根据图片格式中的前三位符号判断是否为图片
+      getOnlineImg方法用于获取在线图片的数据流
+运行结果：该项目在本机上可以运行并完成作业要求
